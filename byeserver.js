@@ -1,11 +1,9 @@
 // byeserver.js
+// 2016-02-26 connection event listener can be an arguement of createServer
 var net = require("net");
 
-var s = net.createServer();
-s.addListener("connection", function(c){
+net.createServer( function(c){
 	c.write("bye bye \n");
 	c.end();
-});
-
-s.listen(8000);
+}).listen(8000);
 
