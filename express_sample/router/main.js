@@ -7,3 +7,4 @@ module.exports = function(app)
 		res.render('about.html');
 	});
 	
+}
