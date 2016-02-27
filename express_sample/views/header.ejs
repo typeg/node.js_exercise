@@ -1,0 +1,16 @@
+ <title>
+     <%= title %>
+ </title>
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+ <script>
+    console.log("HelloWorld");
+	function logIn(){
+		var username = document.getElementById('username').value;
+		var password = document.getElementById('password').value;
+		location.href="/login/"+username+"/"+password;
+	}
+
+	function logOut(){
+		location.href="/logout";
+	}
+ </script>
