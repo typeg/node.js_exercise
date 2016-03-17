@@ -1,15 +1,5 @@
 module.exports = function(app, fs, mysql, dbconn)
 {
-//	var mysql = require('mysql');
-/*	
-	var dbconn = mysql.createConnection({
-       		host: 'localhost',
-       		port: 3306,
-	        user: 'mysqlusr',
-		password: 'myApp!',
-	        database: 'myapp'
-	});
-*/	
 	app.get('/', function(req, res){
 		var sess = req.session;
 
