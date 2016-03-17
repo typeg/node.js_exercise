@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <% include ./header.ejs %>
+  </head>
+  <body>
+    <h1><%=title%></h1>
+    <form name="lists" method="post" action="/lists">
+      <table border=0>
+      <tr>
+	<td>Name</td>
+	<td><input type='text' size=10 name='listName' /></td>
+      </tr>
+      <tr>
+	<td>Description</td>
+	<td><input type='text' size=50 name='listDescription' /><td>
+      </tr>
+      <tr>
+	<td colspan=2><button type='submit'>SUBMIT</button></td>
+      </tr>
+    </form>    
+  </body>
+</html>

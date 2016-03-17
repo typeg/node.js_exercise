@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <% include ./header.ejs %>
+  </head>
+  <body>
+    <h1><%=title%></h1>
+    <form name="lists" method="post" action="/lists/<%=myList[0].idxno%>?_method=put">
+    <table border=0>
+      <tr>
+	<td>Name</td>
+	<td><input type='text' size=10 name='listName' value='<%=myList[0].name%>' /></td>
+      </tr>
+      <tr>
+	<td>Description</td>
+	<td>
+	<input type='text' size=50 name='listDescription' value='<%=myList[0].description%>' />
+	<input type='hidden' name='idxno' value='<%=myList[0].idxno%>' />
+	<td>
+      </tr>
+      <tr>
+	<td colspan=2>
+	<button type='submit'>SUBMIT</button>
+	</td>
+      </tr>
+    </form>    
+  </body>
+</html>

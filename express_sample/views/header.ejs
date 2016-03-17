@@ -12,4 +12,17 @@
 	function logOut(){
 		location.href="/logout";
 	}
+	function viewList(){
+		location.href='/lists';
+	}
+	function createList(){
+		location.href="/lists/new";
+	}
+	function updateList(idxno){
+		location.href="/lists/"+idxno+"/edit";
+	}
+	function deleteList(idxno){
+		document.body.innerHTML += "<form id='delForm' action='/lists/"+idxno+"?_method=delete' method='post'></form>";
+		document.getElementById('delForm').submit();
+	}
  </script>

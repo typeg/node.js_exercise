@@ -12,9 +12,17 @@
 <% if(username){ %>
     <h2>Welcome! <%= username %> (name: <%= name %>)</h2>
 	<br><input type='button' value='LOGOUT' onclick='javascript:logOut();'>
+	<input type='button' value='LIST' onclick='javascript:viewList();'>
+	<input type='button' value='CREATE' onclick='javascript:createList();'>
 <% }else{ %>
     <h2> Please Login. </h2>
-	<br>username<input type='text' id='username'>
-	<br>password<input type='password' id='password'>
-	<br><input type='button' value='LOGIN' onclick='javascript:logIn();'>
+	<% if(result!=undefined && result['success']==0){  %>
+	<%= result['error'] %>
+	<% } %>
+	<form name='loginform' method='post' action='/login'>
+	<br>username<input type='text' id='username' name='username' />
+	<br>password<input type='password' id='password' name='password' />
+	<br><input type='button' value='LOGIN' onclick='javascript:logIn();' />
+	<button type='submit'>LOGIN(POST)</button>
+	</form>
 <% } %>
